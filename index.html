@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂💞 Surat Cinta Untuk Ami 💞🎂</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #ffe4ec, #fff6f8);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .card {
+    background: white;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(255, 105, 180, 0.25);
+    text-align: center;
+    padding: 24px;
+    transition: all 0.5s ease;
+  }
+
+  h1 {
+    color: #ff5e9c;
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: #444;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  button {
+    background: linear-gradient(90deg, #ff84b7, #ffa8c9);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 12px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 133, 187, 0.5);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+
+  .message {
+    display: none;
+    text-align: left;
+    margin-top: 18px;
+    white-space: pre-wrap; /* penting supaya semua baris kekal */
+    line-height: 1.6;
+    color: #444;
+    font-size: 15px;
+  }
+
+  .footer {
+    margin-top: 20px;
+    color: #999;
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div id="front">
+    <h1>🎂💞 Surat Cinta untuk Ami 💞🎂</h1>
+    <p>Hi sayang saya 🩷  
+    Tekan bawah ni untuk baca surat dari hati ibi 💌</p>
+    <button onclick="showMessage()">Buka Kad</button>
+  </div>
+
+  <div id="inside" style="display:none;">
+    <img src="https://i.postimg.cc/65Zhnw2c/no-1.jpg" alt="Our Photo">
+    <div id="msg" class="message"></div>
+    <button onclick="goBack()">Kembali</button>
+  </div>
+
+  <div class="footer">💗 Dibuat khas untuk Ami oleh orang tersayang 💗</div>
+</div>
+
+<script>
+const letterText = `🎂💞 surat cinta untuk ami 💞🎂
+
+hi sayang saya 🩷🎉
+
+hari ni hari yang ibi tunggu-tunggu tiap tahun ….. hari yang paling berharga sebab hari ni lah lahirnya insan yang paling ibi sayang dalam dunia ni 🥺💖
+
+dalam diam, dah hampir dua tahun kita tempuh LDR ni. Walaupun baru je jumpa haritu tapi rasa dia macam setahun 🥹 tapi dalam setiap jarak, dalam setiap rindu tu… ibi tetap bersyukur sebab Tuhan masih izinkan ibi ada insan sekuat dan seindah awak, sayang 🤍
+
+sayang 😿, ibi nak minta maaf kalau sepanjang masa ni ibi ada buat awak sedih, kecil hati, atau rasa macam ibi kurang ambil berat. ibi tahu kadang kita sama-sama sibuk, sama-sama penat dengan dunia masing-masing. tapi walau macam mana pun, ibi tetap akan cuba cari masa untuk kita. sebab bagi ibi, masa dengan sayang tu bukan “kosong”, tapi “ubat” yang paling tenang 😌💫
+
+terima kasih sebab masih ada dengan ibi, walaupun kadang ada salah faham, ada gaduh kecil, ada ego sama-sama. tapi kita tetap pilih untuk betulkan, bukan tinggalkan. itu benda paling ibi hargai …. sebab tak semua orang mampu buat macam tu 🥹🫶
+
+sayang 😼, setiap kali ibi tengok senyum awak (walaupun cuma dari skrin), hati ibi rasa lapang gila. awak ada aura yang boleh buat hari ibi jadi lebih baik tanpa perlu buat apa pun 😭🩷 dan bila awak bagi perhatian walau sekejap je, sumpah… ibi cair habis 🫠💞
+
+ibi tahu ibi bukan sempurna, tapi ibi tengah belajar — belajar faham awak lebih dalam, belajar sabar dengan kerenah awak (yang kadang comel, kadang menguji kesabaran 🤭), belajar jadi versi terbaik untuk awak, sebab awak layak dapat cinta yang lembut dan tulus 🕊
+
+hari ni, ibi cuma nak awak tahu ….. ibi sayang awak sangat-sangat, lebih dari apa yang ibi pernah bayangkan dulu 💋 semoga hari lahir awak kali ni penuh dengan tawa, rezeki, dan kasih dari semua orang yang sayang awak 🌸 tapi paling penting, semoga awak terus rasa disayangi, especially oleh ibi 🫶
+
+dan nanti kita jumpa lagi, ibi janji nak peluk awak lama-lama, sambil bisik …. “selamat hari lahir, cinta hati ibi, yang paling manis dan paling kuat.” 🥹💞
+
+terima kasih sebab tetap jadi rumah yang ibi nak balik setiap kali rasa penat. ibi sayang awak dari hujung rindu sampai hujung nyawa 💖
+
+🩷 happy birthday, sayang ibi! 🩷
+🎈 dari orang yang selalu rindu awak,
+– ibi baby`;
+
+function showMessage() {
+  document.getElementById('front').style.display = 'none';
+  document.getElementById('inside').style.display = 'block';
+  document.getElementById('msg').style.display = 'block';
+  document.getElementById('msg').textContent = letterText;
+}
+
+function goBack() {
+  document.getElementById('inside').style.display = 'none';
+  document.getElementById('front').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
